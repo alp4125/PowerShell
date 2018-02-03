@@ -9,8 +9,8 @@
     Invoke-PnPReScan.ps1 -WaitTime 30
 .NOTES
         NAME:      	Invoke-PnPReScan.ps1
-		AUTHOR:    	Fredrik Wall, fredrik@poweradmin.se
-		BLOG:       http://www.fredrikwall.se
+	AUTHOR:    	Fredrik Wall, fredrik@poweradmin.se
+	BLOG:       http://www.fredrikwall.se
         CREATED:	11/19/2017
         VERSION:    1.0
 #>
