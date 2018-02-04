@@ -17,3 +17,11 @@
 		VERSION:	1.2
 
 #>
+
+This is a PowerShell GUI Tool written in PowerShell Studio 2017.
+
+.psf file is the PowerShell Studio 2017 file
+.ps1 file is the export file
+
+More information can be found here:
+http://fredrikwall.se/projects/msi-information-tool/
