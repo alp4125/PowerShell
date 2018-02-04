@@ -1,4 +1,6 @@
 <#
+	
+	
 	.SYNOPSIS
 		MSI Information Tool
 
@@ -13,4 +15,5 @@
 		CREATED:	12/05/2014
 		CHANGED:	03/02/2018
 		VERSION:	1.2
-	#>
+
+#>
