@@ -20,9 +20,12 @@
         Create-WiFiInfoDocument -SSID "MySSID" -Password "MyPassword" -Description "My WiFi Access"
 
     .NOTES
-        Version        1.0
-        Author         Fredrik Wall, fredrik.wall@retune.se
-        Creation Date  2018-04-21
+        Version:        1.0
+        Author:         Fredrik Wall, fredrik.wall@retune.se
+        Creation Date:  2018-04-21
+
+		Dependencies:
+		myLogo.png - in the script folder
 
 		Code from others:
 		Thanks to Patrick Lambert - http://dendory.net for the code from the Resize-Image module.
