@@ -53,7 +53,7 @@ Function New-LDAPComputer
 		$newComputer = $myOU.psbase.children.add("cn=" + $ComputerName, "computer")
 		$newComputer.psbase.commitchanges()
 		
-		$newComputer.samaccountname = $SAMAccountName + "$"
+		$newComputer.samaccountname = $SAMAccountName
 		$newComputer.psbase.commitchanges()
 	}
 	catch
