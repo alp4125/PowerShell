@@ -50,7 +50,7 @@ Function Get-LDAPUser
 			$myActiveDomain = new-object DirectoryServices.DirectoryEntry
 			$myDomain = $myActiveDomain.distinguishedName
 			$mySearcher = [System.DirectoryServices.DirectorySearcher]"[ADSI]LDAP://$myDomain"
-			$mySearcher.filter = "(&(objectClass=group)(sAMAccountName=$UserName))"
+			$mySearcher.filter = "(&(objectClass=user)(sAMAccountName=$UserName))"
 			
 			try
 			{
