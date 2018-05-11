@@ -23,15 +23,16 @@ Function Get-LDAPComputer
             "PC001" | Get-LDAPComputer | gm
 	
 	.NOTES
-		NAME:       Get LDAP Computer Information
+		NAME:       Get-LDAPComputer
 		AUTHOR:     Fredrik Wall, fredrik@poweradmin.se
 		TWITTER:    @walle75
-		BLOG:       http://poweradmin.se/blog
+		BLOG:       https://www.fredrikwall.se/
 		CREATED:    2012-01-20
-		LASTEDIT:   2016-03-08
+        LASTEDIT:   2016-03-08
+        VERSION:    2.1
 	
 	.LINK
-		https://github.com/FredrikWall/Scripts
+		https://github.com/FredrikWall
 #>
 	
 	[CmdletBinding()]
@@ -56,10 +57,9 @@ Function Get-LDAPComputer
 			}
 			catch
 			{
-				
+				Write-Warning "$_"
 			}
 		}
 	}
 }
-
 
