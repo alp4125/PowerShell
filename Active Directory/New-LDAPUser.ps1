@@ -53,7 +53,7 @@ Function New-LDAPUser
 		$newUser = $myOU.psbase.children.add("cn=" + $UserName, "User")
 		$newUser.psbase.commitchanges()
 		
-		$newUser.samaccountname = $SAMAccountName + "$"
+		$newUser.samaccountname = $SAMAccountName
 		$newUser.psbase.commitchanges()
 	}
 	catch
