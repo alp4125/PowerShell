@@ -273,13 +273,13 @@ foreach ($item in $myOUs)
 			try
 			{
 				New-ADOrganizationalUnit -Name $myCountry.Name -Path $myCountryADPath -Description "$($item.Name) in $($myCountry.Name)" -ProtectedFromAccidentalDeletion $false -ErrorAction SilentlyContinue
-				Write-Output "`n   $($myCountry.Name) - Skapade OU:t`n"
+				Write-Output "`n   $($myCountry.Name) - Created the OU`n"
 			}
 			catch
 			{
 				if ($error[0].Exception.Message -match "already in use")
 				{
-					Write-Output "`n   $($myCountry.Name) - OU:t Finns redan`n"
+					Write-Output "`n   $($myCountry.Name) - OU Already exists`n"
 				}
 				else
 				{
@@ -332,7 +332,7 @@ foreach ($item in $myOUs)
 					
 					if (!($myComputer -eq "" -or $myComputer -eq $null))
 					{
-						write-host "        $($myComputer.name) - Finns redan!"
+						Write-Output "        $($myComputer.name) - Already exists!"
 					}
 					else
 					{
@@ -341,7 +341,7 @@ foreach ($item in $myOUs)
 							$myNewCountryADPath = "OU=$($myCountry.name),$($myCountryADPath)"
 							
 							New-ADComputer -Name "$($startName)$($i)" -Path $myNewCountryADPath -Description "$($item.Name) in $($myCountry.Name)" -ErrorAction SilentlyContinue
-							write-host "        $($startName)$($i) - Skapad!"
+							Write-Output "        $($startName)$($i) - Created!"
 						}
 						catch
 						{
@@ -373,13 +373,13 @@ foreach ($item in $myOUs)
 					try
 					{
 						New-ADGroup -Name "$($myGroup.name) $($myCountry.name)" -Path $mySecurityGroupADPath -GroupCategory Security -GroupScope Global -ErrorAction SilentlyContinue
-						Write-Output "        $($myGroup.name) $($myCountry.name) - Skapade Gruppen"
+						Write-Output "        $($myGroup.name) $($myCountry.name) - Created the group"
 					}
 					catch
 					{
 						if ($error[0].Exception.Message -match "already exist")
 						{
-							Write-Output "        $($myGroup.name) $($myCountry.name) - Gruppen finns redan!"
+							Write-Output "        $($myGroup.name) $($myCountry.name) - Group already exists!"
 						}
 						else
 						{
@@ -434,7 +434,7 @@ foreach ($item in $myOUs)
 					
 					if (!($myADUser -eq "" -or $myADUser -eq $null))
 					{
-						Write-Output "        $($samAccountName) - $($givenname).$($surname)@$($dnsroot) - Finns redan!"
+						Write-Output "        $($samAccountName) - $($givenname).$($surname)@$($dnsroot) - Already exists!"
 						
 					}
 					else
@@ -442,7 +442,7 @@ foreach ($item in $myOUs)
 						try
 						{
 							New-ADUser -SamAccountName $samAccountName -name "$($givenname) $($surname)" -GivenName $givenname -Surname $surname -Path $myUserADPath -AccountPassword $myPWD -Enabled $true -UserPrincipalName "$($givenname).$($surname)@$($myDNSroot)"
-                            Write-Output "        $($samAccountName) - $($givenname).$($surname)@$($myDNSroot) - Skapade användaren"
+                            Write-Output "        $($samAccountName) - $($givenname).$($surname)@$($myDNSroot) - Created the user!"
 						}
 						catch
 						{
