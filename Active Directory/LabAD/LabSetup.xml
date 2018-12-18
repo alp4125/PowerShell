@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LabAD>
+<SecurityGroups>
+	<SecurityGroup>
+		<Name>All Laptops</Name>
+	</SecurityGroup>
+
+	<SecurityGroup>
+		<Name>All Workstations</Name>
+	</SecurityGroup>
+
+	<SecurityGroup>
+		<Name>All Servers</Name>
+	</SecurityGroup>
+
+	<SecurityGroup>
+		<Name>All Users</Name>
+	</SecurityGroup>
+
+	<SecurityGroup>
+		<Name>File Server Read</Name>
+	</SecurityGroup>
+
+	<SecurityGroup>
+		<Name>File Server Change</Name>
+	</SecurityGroup>
+
+	<SecurityGroup>
+		<Name>File Server Full Access</Name>
+	</SecurityGroup>
+</SecurityGroups>
+<Countrys>
+	<Country>
+		<Name>Sweden</Name>
+		<Prefix>SE</Prefix>
+		<City>Stockholm</City>
+		<Users>300</Users>
+		<Servers>20</Servers>
+		<Workstations>100</Workstations>
+		<Laptops>220</Laptops>
+	</Country>
+
+	<Country>
+		<Name>Denmark</Name>
+		<Prefix>DK</Prefix>
+		<City>Copenhagen</City>
+		<Users>200</Users>
+		<Servers>4</Servers>
+		<Workstations>20</Workstations>
+		<Laptops>120</Laptops>
+	</Country>
+
+	<Country>
+		<Name>Norway</Name>
+		<Prefix>NO</Prefix>
+		<City>Oslo</City>
+		<Users>100</Users>
+		<Servers>5</Servers>
+		<Workstations>60</Workstations>
+		<Laptops>20</Laptops>
+	</Country>
+
+	<Country>
+		<Name>Finland</Name>
+		<Prefix>FI</Prefix>
+		<City>Helsinki</City>
+		<Users>300</Users>
+		<Servers>2</Servers>
+		<Workstations>5</Workstations>
+		<Laptops>180</Laptops>
+	</Country>
+
+	<Country>
+		<Name>USA</Name>
+		<Prefix>US</Prefix>
+		<City>Washington DC</City>
+		<Users>100</Users>
+		<Servers>2</Servers>
+		<Workstations>2</Workstations>
+		<Laptops>98</Laptops>
+	</Country>
+
+	<Country>
+		<Name>England</Name>
+		<Prefix>UK</Prefix>
+		<City>London</City>
+		<Users>80</Users>
+		<Servers>65</Servers>
+		<Workstations>100</Workstations>
+		<Laptops>9</Laptops>
+	</Country>
+
+
+
+
+</Countrys>
+<OrganizationalUnits>
+	<OrganizationalUnit>
+		<Name>LabOU</Name>
+		<Path></Path>
+		<Description>Root OU for Lab Prod</Description>
+	</OrganizationalUnit>
+
+	<OrganizationalUnit>
+		<Name>Servers</Name>
+		<Path>OU=LabOU</Path>
+		<Country>Yes</Country>
+		<Description>OU for Servers in LabOU</Description>
+	</OrganizationalUnit>
+
+	<OrganizationalUnit>
+		<Name>Workstations</Name>
+		<Path>OU=LabOU</Path>
+		<Country>Yes</Country>
+		<Description>OU for Workstations in LabOU</Description>
+	</OrganizationalUnit>
+
+	<OrganizationalUnit>
+		<Name>Laptops</Name>
+		<Path>OU=LabOU</Path>
+		<Country>Yes</Country>
+		<Description>OU for Laptops in LabOU</Description>
+	</OrganizationalUnit>
+
+	<OrganizationalUnit>
+		<Name>Users</Name>
+		<Path>OU=LabOU</Path>
+		<Country>Yes</Country>
+		<Description>OU for Users in LabOU</Description>
+	</OrganizationalUnit>
+
+	<OrganizationalUnit>
+		<Name>Security Groups</Name>
+		<Path>OU=LabOU</Path>
+		<Country>Yes</Country>
+		<Description>OU for Security Groups in LabOU</Description>
+	</OrganizationalUnit>
+
+	<OrganizationalUnit>
+		<Name>Service Accounts</Name>
+		<Path>OU=LabOU</Path>
+		<Country>No</Country>
+		<Description>OU for Service Accounts in LabOU</Description>
+	</OrganizationalUnit>
+
+</OrganizationalUnits>
+</LabAD>
