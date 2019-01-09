@@ -46,6 +46,7 @@ function Set-MDTCustomSettingsInformation
     catch {
        if ($_.Exception.Message -eq "You cannot call a method on a null-valued expression.") {
         Write-Warning "Could not find property"
+        Break
        }
     }
 
