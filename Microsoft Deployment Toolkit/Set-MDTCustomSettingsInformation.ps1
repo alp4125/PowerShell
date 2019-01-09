@@ -22,7 +22,7 @@
 			Author: 		Fredrik Wall
 			Email:			fredrik@poweradmin.se
 			Version:		1.0
-			Created:		2018-12-09
+			Created:		2018-12-08
 #>
 function Set-MDTCustomSettingsInformation
 {
@@ -40,7 +40,19 @@ function Set-MDTCustomSettingsInformation
 		$Value
 	)
 	
-	$currentValue = ((Select-String -Path "$($FilePath)\CustomSettings.ini" -Pattern $property).ToString()).split("=")[1]
-	
-	(Get-Content $FilePath).replace($currentValue, $value) | Set-Content $FilePath
+	try {
+        $currentValue = ((Select-String -Path "$($FilePath)\CustomSettings.ini" -pattern "$($property)\b" -AllMatches -ErrorAction Stop).ToString()).split("=")[1]
+    }
+    catch {
+       if ($_.Exception.Message -eq "You cannot call a method on a null-valued expression.") {
+        Write-Warning "Could not find property"
+       }
+    }
+
+    try {
+        (Get-Content "$($FilePath)\CustomSettings.ini").replace("$($property)=$($currentValue)", "$($property)=$($Value)") | Set-Content "$($FilePath)\CustomSettings.ini"
+    }
+    catch {
+        Write-Warning "Error setting the value for the property: $($_.Exception.Message)"
+    }
 }
