@@ -1,0 +1,21 @@
+# Comparison Operators
+https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_comparison_operators?view=powershell-5.1
+
+# Reg Ex
+https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_regular_expressions?view=powershell-5.1
+https://kevinmarquette.github.io/2017-07-31-Powershell-regex-regular-expression/#regex-quick-start
+
+# Create Real Fake Names
+https://github.com/FredrikWall/PowerShell
+
+# Error handling
+https://kevinmarquette.github.io/2017-04-10-Powershell-exceptions-everything-you-ever-wanted-to-know/
+
+# Hash table
+https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_hash_tables?view=powershell-5.1
+
+# Post to teams
+https://blogs.technet.microsoft.com/privatecloud/2016/11/02/post-notifications-to-microsoft-teams-using-powershell/
+
+# Arguments to run powershell.exe as system and more
+https://docs.microsoft.com/en-us/powershell/module/Microsoft.PowerShell.Core/About/about_PowerShell_exe?view=powershell-5.1
