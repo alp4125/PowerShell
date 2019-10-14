@@ -14,6 +14,9 @@ https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/abo
 # Command Syntax
 https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_command_syntax?view=powershell-5.1
 
+# Comment Based Help
+https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_comment_based_help?view=powershell-5.1
+
 # Comparison Operators
 https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_comparison_operators?view=powershell-5.1
 
