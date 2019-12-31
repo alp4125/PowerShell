@@ -1,5 +1,5 @@
 Function Uninstall-VisualStudioCode {
-	<#
+<#
 	.SYNOPSIS
 		Uninstall function for Visual Studio Code
 	
@@ -17,7 +17,7 @@ Function Uninstall-VisualStudioCode {
 		Will Uninstall Visual Studio Code silently
 	
 	.EXAMPLE
-        Uninstall-VisualStudioCode -Force
+        	Uninstall-VisualStudioCode -Force
 
 		Will Uninstall Visual Studio Code silently and remove all
 		Visual Studio Code folders with settings and extensions.
@@ -28,7 +28,11 @@ Function Uninstall-VisualStudioCode {
 		TWITTER:    @walle75
 		BLOG:       https://www.fredrikwall.se/
 		CREATED:    2019-12-08
-        VERSION:    1.0
+        	CHANGED:    2019-12-31
+		VERSION:    1.1
+
+		1.1
+		Added support for uninstall the system version of Visual Studio Code
 	
 	.LINK
 		https://github.com/FredrikWall
@@ -39,7 +43,7 @@ Function Uninstall-VisualStudioCode {
 
 	# Uninstall Visual Studio Code
 	if (Test-Path "$env:LOCALAPPDATA\Programs\Microsoft VS Code\unins000.exe") {
-		Write-Output "Visual Studio Code will be uninstalled."
+		Write-Output "Visual Studio Code for the current user will be uninstalled."
 	
 		$VsCode = Get-process "code" -ErrorAction SilentlyContinue
 
@@ -54,7 +58,7 @@ Function Uninstall-VisualStudioCode {
 		
 		}
 		try {
-			start-process "$env:LOCALAPPDATA\Programs\Microsoft VS Code\unins000.exe" -arg "/VERYSILENT" -Wait
+			Start-Process "$env:LOCALAPPDATA\Programs\Microsoft VS Code\unins000.exe" -arg "/VERYSILENT" -Wait
 		}
 		catch {
 			Write-Output "Visual Studio Code could not be uninstalled."
@@ -66,6 +70,34 @@ Function Uninstall-VisualStudioCode {
 		Write-Output "Visual Studio Code is not installed for the current user."
 	}
 
+	if (Test-Path "C:\Program Files\Microsoft VS Code\unins000.exe") {
+		Write-Output "Visual Studio Code for system will be uninstalled."
+	
+		$VsCode = Get-process "code" -ErrorAction SilentlyContinue
+
+		if ($VsCode) {
+			Write-Output "Visual Studio Code will be closed."
+			try {
+				$VsCode | Stop-Process -Force
+			}
+			catch {
+				Write-Output "Visual Studio Code could not be closed."
+			}
+		
+		}
+		try {
+			Start-Process "C:\Program Files\Microsoft VS Code\unins000.exe" -arg "/SILENT" -Wait
+		}
+		catch {
+			Write-Output "Visual Studio Code could not be uninstalled."
+			Write-Output "Try to uninstall it manually and then run the script again."
+			Break
+		}
+	}
+	else {
+		Write-Output "Visual Studio Code is not installed for the current user."
+	}
+	
 
 	if ($Force) {
 		Write-Output "Will perform an remove of $env:APPDATA\Code if it exists"
@@ -106,3 +138,5 @@ Function Uninstall-VisualStudioCode {
 		}
 	}
 }
+
+Uninstall-VisualStudioCode -Force
