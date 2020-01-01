@@ -14,6 +14,11 @@ Will add
 and
 "Open with Code" action to Windows Explorer directory context menu
 
+Set-BasicPSSettingsVisualStudioCode.ps1
+---------------------------------------
+This function will use the settings.json file from here to
+do some basic PowerShell settings to Visual Studio Code.
+
 settings.json
 -------------
 My basic settings file for Visual Studio Code as my PowerShell script editor.
