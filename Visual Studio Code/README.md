@@ -1,4 +1,5 @@
 Visual Studio Code
+------------------
 
 Uninstall-VisualStudioCode.ps1
 ==============================
