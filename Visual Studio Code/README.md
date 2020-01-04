@@ -26,3 +26,9 @@ settings.json
 -------------
 
 My basic settings file for Visual Studio Code as my PowerShell script editor.
+
+Visual Studio Code and GitHub CheatSheet.pdf
+--------------------------------------------
+
+A basic CheatSheet for setting up Visual Studio Code for GitHub.
+To install Git and configure it and to clone a repository on GitHub, pull from GitHub and push to GitHub.
