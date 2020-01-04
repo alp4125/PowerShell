@@ -11,3 +11,17 @@ Get-LDAPGroup.ps1
 Get-LDAPOU.ps1
 --------------
 
+Get-LDAPUser.ps1
+----------------
+
+New-LDAPComputer.ps1
+--------------------
+
+New-LDAPGroup.ps1
+-----------------
+
+New-LDAPOU.ps1
+--------------
+
+New-LDAPUser.ps1
+----------------
