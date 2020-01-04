@@ -8,10 +8,19 @@ If you use It and post It online I would like a notice/thanks and
 if you use my code in your work It would be nice with a thanks message.
 
 - Active Directory
+- Azure Active Directory
 - Configuration Manager
 - EXE Application Information Tool
+- Functions
+- Fundamentals
 - MSI Information Tool
+- Microsoft Deployment Toolkit
+- Microsoft Word
+- Mobicontrol
+- PowerShell Studio
 - Real Fake Names
+- Visual Studio Code
+- Windows
 
 Create-WiFiPoster.ps1
 
