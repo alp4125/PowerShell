@@ -6,6 +6,7 @@
     Installation of Visual Studio Code automatically.
     Plus installation of following extensions:
 
+    ms-vscode.PowerShell
     eamodio.gitlens
     davidanson.vscode-markdownlint
     vscode-icons-team.vscode-icons
