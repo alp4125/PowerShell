@@ -1,6 +1,14 @@
 Visual Studio Code
 ==================
 
+Install-VisualStudioCode.ps1
+------------------------------
+
+Install script for Visual Studio Code.
+Uses the Install-VSCode.ps1 script from Microsoft, adds extra extensions.
+And uses both Set-OpenWithVisualStudioCode and Set-BasicPSSettingsVisualStudioCode to
+make settings.
+
 Uninstall-VisualStudioCode.ps1
 ------------------------------
 
