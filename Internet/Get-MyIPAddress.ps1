@@ -20,4 +20,4 @@ function Get-MyIPAddress {
     Return $MyIPAddress
 }
 
-Get-MYIPAddress
+Get-MyIPAddress
