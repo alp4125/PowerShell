@@ -12,6 +12,7 @@ function Get-Windows10BuildInformation {
         .PARAMETER OSBuildVersion
             Specifies OS Build number.
             Can handle both 19041.630 and 10.0.19041.630 format.
+            Without this parameter It will show local computers OS Build version.
 
         .PARAMETER Online
             Will open default browser with the Url to the KB article
