@@ -4,10 +4,8 @@ function Get-Windows10BuildInformation {
             Will get information about the OS Build
 
         .DESCRIPTION
-            Will get information about the OS Build from a json file.
+            Will get information about the OS Build from a json file with Windows 10 release information.
             It will provide version, availability date (release date), servicing option and Kb article.
-            The json file is compiled by the author of this function, but information comes from
-            https://winreleaseinfoprod.blob.core.windows.net/winreleaseinfoprod/en-US.html
 
         .PARAMETER OSBuildVersion
             Specifies OS Build number.
@@ -35,11 +33,19 @@ function Get-Windows10BuildInformation {
 
         .NOTES
             NAME:      	Get-Windows10BuildInformation
+            VERSION:    1.1
             AUTHOR:    	Fredrik Wall, fredrik@poweradmin.se
             BLOG:		http://www.fredrikwall.se
             TWITTER:	walle75
             CREATED:	19/11/2020
-    
+            
+            INFO:
+            
+            The json file is compiled by the author of this function, but information comes from
+            https://winreleaseinfoprod.blob.core.windows.net/winreleaseinfoprod/en-US.html
+
+            If you use my Get-Windows10ReleaseInformation function you can create a new and fresh json file.
+            And save It as Windows10BuildInformation.json in the same folder as the script.
     #>
     param(
         [cmdletbinding()]
@@ -97,3 +103,6 @@ function Get-Windows10BuildInformation {
 
     }
 }
+
+Clear-Host
+Get-Windows10BuildInformation
