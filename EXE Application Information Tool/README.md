@@ -7,6 +7,7 @@ Click on the browse button to select a EXE file and then click on Get to Get the
 
 ![alt text](https://github.com/FredrikWall/PowerShell/blob/master/EXE%20Application%20Information%20Tool/exeappinfo.PNG?raw=true)
 
+To Copy information from a text box, just mark the text and click on Copy.
+If you want to get information from another file click on Clear and then Browse again.
 
 
-Added information about Company Name
