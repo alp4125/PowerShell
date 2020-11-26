@@ -33,7 +33,19 @@ If you use the parameter ***-Online*** you will get information about the build 
 
 Get-Windows10ReleaseInformation.ps1
 -----------------------------------
+This function will go to Microsofts release page for Windows 10.
+https://winreleaseinfoprod.blob.core.windows.net/winreleaseinfoprod/en-US.html
+
+And get the build information for all Windows 10 versions.
+It will get the following information, ***Version*** (of Windows 10), ***OS build***, ***Availability date*** (release date), ***Servicing option*** and ***KB Article***
+
+And then create a object with all the information.
+
 ![alt text](https://github.com/FredrikWall/PowerShell/blob/master/Windows/Pictures/Get-Windows10ReleasInformation02.png?raw=true)
+
+This means that It's easy to save the information to a .json file by using the function like this ***Get-Windows10ReleaseInformation | ConvertTo-Json***.
+And save it to a .json file by this ***Get-Windows10ReleaseInformation | ConvertTo-Json | Out-File .\Windows10BuildInformation.json***. 
+
 ![alt text](https://github.com/FredrikWall/PowerShell/blob/master/Windows/Pictures/Get-Windows10ReleasInformation01.png?raw=true)
 
 Invoke-CleanTemp.ps1
