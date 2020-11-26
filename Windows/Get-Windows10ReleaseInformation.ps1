@@ -109,3 +109,5 @@ function Get-Windows10ReleaseInformation {
         $TableNumber++
     }
 }
+
+Get-Windows10ReleaseInformation | ConvertTo-Json | Out-File .\Windows10ReleaseInformation.json
