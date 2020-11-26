@@ -15,7 +15,9 @@ I used It before Test-Connection came and sometimes I use It today too.
 
 Invoke-CleanTemp.ps1
 --------------------
-This function will clean the ***current users*** temp folder, plus the ***c:\windows\temp*** folder.
+This function will clean the ***current users*** temp folder, plus the ***c:\windows\temp*** folder as standard.
+
+Now It also has support for ***All Users*** with the parameter ***-AllUsers***
 
 It has support for closing a set of applications first to be able to remove as much files and folders as possible.
 
