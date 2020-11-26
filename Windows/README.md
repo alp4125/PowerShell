@@ -17,7 +17,8 @@ Invoke-CleanTemp.ps1
 --------------------
 This function will clean the ***current users*** temp folder, plus the ***c:\windows\temp*** folder as standard.
 
-Now It also has support for ***All Users*** with the parameter ***-AllUsers***
+Now It also has support for ***All Users*** temp folders with the parameter ***-AllUsers***.
+With this parameter you will do a nice clean on a computer with lots of users.
 
 It has support for closing a set of applications first to be able to remove as much files and folders as possible.
 
