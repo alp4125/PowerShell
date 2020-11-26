@@ -12,7 +12,7 @@ It has support for closing a set of applications first to be able to remove as m
 
 And It has support for ***-WhatIf***
 
-![alt text](https://github.com/FredrikWall/PowerShell/blob/master/Windows/Invoke-CleanTemp.png?raw=true)
+![alt text](https://github.com/FredrikWall/PowerShell/blob/master/Windows/Pictures/Invoke-CleanTemp.png?raw=true)
 
 
 
