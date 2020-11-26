@@ -65,6 +65,9 @@ Invoke-PnPReScan.ps1
 --------------------
 This script will do a ***Plug n Play, Scan for Hardware Changes***.
 
+Sometimes you need to make a PnP ReScan when you have installed drivers.
+This script will help you with that so you do not need to do It manually on lots of computers.
+
 ![alt text](https://github.com/FredrikWall/PowerShell/blob/master/Windows/Pictures/Invoke-PnPReScan02.png?raw=true)
 
 Just start the script with PowerShell started with ***Run As Administrator***.
