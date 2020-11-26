@@ -95,7 +95,7 @@ function Get-Windows10BuildInformation {
         $MyWindows10BuildInfo = $Windows10OSBuildInfo | Where-Object { $_.'OS build' -match $OSBuildVersion }
 
         if ($Online) {
-            $KB = ($MyWindows10BuildInfo.'Kb article').Replace("KB ","")
+            $KB = ($MyWindows10BuildInfo.'Kb article').Replace("KB ", "")
             Start-Process "https://support.microsoft.com/help/$KB"
         }
 
@@ -105,4 +105,4 @@ function Get-Windows10BuildInformation {
 }
 
 Clear-Host
-Get-Windows10BuildInformation
+Get-Windows10BuildInformation -Online
