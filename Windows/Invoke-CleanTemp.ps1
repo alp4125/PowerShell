@@ -9,6 +9,9 @@ function Invoke-CleanTemp {
         .Parameter Force
             Closes running programs from the application array in the function
 
+        .Parameter AllUsers
+            Will clean temp folders for All Users
+            
         .Example
             PS C:\> Invoke-CleanTemp
             Will start the function and try to delete files and folder in the current users temp and
@@ -20,11 +23,17 @@ function Invoke-CleanTemp {
             and then tries to delete files and folder in the current users temp and
             in the C:\Windows\Temp folder.
 
+        .Example
+            PS C:\> Invoke-CleanTemp -AllUsers
+            Will start the function and try to delete files and folder flor all users temp folders and
+            in the C:\Windows\Temp folder.
+
         .Notes
             NAME:      	Invoke-CleanTemp
             AUTHOR:    	Fredrik Wall, fredrik@poweradmin.se
             BLOG:		https://www.fredrikwall.se
             TWITTER:	walle75
+            VERSION:    2.0
             CREATED:    04/07/2010
             LASTEDIT:  	26/11/2020
             CHANGES:   	04/07/2010  -   Added support for closing Chrome and Tweetdeck
@@ -32,6 +41,7 @@ function Invoke-CleanTemp {
                         26/11/2020  -   Changed parameter name to Force for closing applications
                                         Added and removed applications to close
                                         Added support for WhatIf to show what the function will do if the parameter is used
+                                        Added support for All Users
 
     #>
     #Requires -RunAsAdministrator
@@ -60,8 +70,6 @@ function Invoke-CleanTemp {
             }
         }
     }
-    
-    
     
     if ($AllUsers) {
         $AllUsersTempFolderFilesAndFolders = Get-ChildItem -Path "C:\Users\*\AppData\Local\Temp" -Recurse
