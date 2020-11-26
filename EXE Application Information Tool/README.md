@@ -1,27 +1,25 @@
-# Active Directory
+# Exe Application Information Tool
+This tool is written in PowerShell Studio 2019.
 
-These are my functions for working with Active Directory without using the Microsoft Active Directory module.
+If you want to use the tool just get the **ExeApplicationInformation.ps1** file.
 
-Get-LDAPComputer.ps1
---------------------
+And If you want the source code for editing the form get the **ExeApplicationInformation.psf** file.
 
-Get-LDAPGroup.ps1
------------------
+It's a easy tool to get information about exe files.
 
-Get-LDAPOU.ps1
---------------
+**Product Name**
 
-Get-LDAPUser.ps1
-----------------
+**Version**
 
-New-LDAPComputer.ps1
---------------------
+**Comapny Name**
 
-New-LDAPGroup.ps1
------------------
+![alt text](https://github.com/FredrikWall/PowerShell/blob/master/EXE%20Application%20Information%20Tool/exeappinfo1.PNG?raw=true)
 
-New-LDAPOU.ps1
---------------
+Click on the browse button to select a EXE file and then click on Get to Get the information.
 
-New-LDAPUser.ps1
-----------------
+![alt text](https://github.com/FredrikWall/PowerShell/blob/master/EXE%20Application%20Information%20Tool/exeappinfo.PNG?raw=true)
+
+To Copy information from a text box, just mark the text and click on Copy.
+If you want to get information from another file click on Clear and then Browse again.
+
+The function behind the information is published in the file **Get-ExeAppInformation_function.ps1**
