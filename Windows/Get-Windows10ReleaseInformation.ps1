@@ -16,7 +16,7 @@ function Get-Windows10ReleaseInformation {
             Will show all information in json format.
 
         .EXAMPLE
-            C:\PS> Get-Windows10ReleaseInformation | ConvertTo-Json | Out-File .\Windows10ReleaseInformation.json
+            C:\PS> Get-Windows10ReleaseInformation | ConvertTo-Json | Out-File .\Windows10BuildInformation.json
             Will save the json format to a file.
 
         .NOTES
@@ -110,4 +110,4 @@ function Get-Windows10ReleaseInformation {
     }
 }
 
-Get-Windows10ReleaseInformation | ConvertTo-Json | Out-File .\Windows10ReleaseInformation.json
+Get-Windows10ReleaseInformation | ConvertTo-Json | Out-File .\Windows10BuildInformation.json
