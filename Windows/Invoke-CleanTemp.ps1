@@ -11,7 +11,7 @@ function Invoke-CleanTemp {
 
         .Parameter AllUsers
             Will clean temp folders for All Users
-            
+
         .Example
             PS C:\> Invoke-CleanTemp
             Will start the function and try to delete files and folder in the current users temp and
@@ -25,7 +25,7 @@ function Invoke-CleanTemp {
 
         .Example
             PS C:\> Invoke-CleanTemp -AllUsers
-            Will start the function and try to delete files and folder flor all users temp folders and
+            Will start the function and try to delete files and folder for all users temp folders and
             in the C:\Windows\Temp folder.
 
         .Notes
