@@ -80,4 +80,7 @@ Just start the script with PowerShell started with ***Run As Administrator***.
 
 Windows10BuildInformation.json
 ------------------------------
+This is an Json file with the Windows 10 Release Information.
+
+The .json file will be updated as soon as Microsoft changes their release information.
 
