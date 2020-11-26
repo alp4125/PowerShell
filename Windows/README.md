@@ -16,6 +16,8 @@ I used It before Test-Connection came and sometimes I use It today too.
 Get-Windows10BuildInformation.ps1
 ---------------------------------
 
+Get-Windows10ReleaseInformation.ps1
+-----------------------------------
 
 Invoke-CleanTemp.ps1
 --------------------
@@ -30,6 +32,8 @@ And It has support for ***-WhatIf***
 
 ![alt text](https://github.com/FredrikWall/PowerShell/blob/master/Windows/Pictures/Invoke-CleanTemp.png?raw=true)
 
+Invoke-PnPReScan.ps1
+--------------------
 
 Windows10BuildInformation.json
 ------------------------------
