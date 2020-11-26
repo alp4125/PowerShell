@@ -9,7 +9,7 @@ This function will clean the ***current users*** temp folder, plus the ***c:\win
 
 It has support for closing a set of applications first.
 
-And It has support for -WhatIf
+And It has support for ***-WhatIf***
 
 ![alt text](https://github.com/FredrikWall/PowerShell/blob/master/Windows/Invoke-CleanTemp.png?raw=true)
 
