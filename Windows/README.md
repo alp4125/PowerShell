@@ -4,6 +4,10 @@ These are my functions, scripts and special files for working with Windows.
 
 All functions are stored in a separate .ps1 file.
 
+With an standard example how to use them.
+
+So almost all of the PowerShell files can be runned as they are.
+
 Get-PingStatus
 --------------
 One of my oldest functions.
