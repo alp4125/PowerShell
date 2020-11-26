@@ -33,6 +33,7 @@ If you use the parameter ***-Online*** you will get information about the build 
 
 Get-Windows10ReleaseInformation.ps1
 -----------------------------------
+![alt text](https://github.com/FredrikWall/PowerShell/blob/master/Windows/Pictures/Get-Windows10ReleasInformation01.png?raw=true)
 
 Invoke-CleanTemp.ps1
 --------------------
