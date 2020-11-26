@@ -8,8 +8,8 @@ With an standard example how to use them.
 
 So almost all of the PowerShell files can be runned as they are.
 
-Get-PingStatus
---------------
+Get-PingStatus.ps1
+------------------
 One of my oldest functions.
 I used It before Test-Connection came and sometimes I use It today too.
 
