@@ -43,7 +43,7 @@ And then create a object with all the information.
 
 ![alt text](https://github.com/FredrikWall/PowerShell/blob/master/Windows/Pictures/Get-Windows10ReleasInformation02.png?raw=true)
 
-This means that It's easy to save the information to a .json file by using the function like this ***Get-Windows10ReleaseInformation | ConvertTo-Json***.
+This means that It's easy to convert the information to Json by using the function like this ***Get-Windows10ReleaseInformation | ConvertTo-Json***.
 And save it to a .json file by this ***Get-Windows10ReleaseInformation | ConvertTo-Json | Out-File .\Windows10BuildInformation.json***. 
 
 ![alt text](https://github.com/FredrikWall/PowerShell/blob/master/Windows/Pictures/Get-Windows10ReleasInformation01.png?raw=true)
