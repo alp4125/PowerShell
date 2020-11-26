@@ -22,4 +22,4 @@ Click on the browse button to select a EXE file and then click on Get to Get the
 To Copy information from a text box, just mark the text and click on Copy.
 If you want to get information from another file click on Clear and then Browse again.
 
-
+The function behind the information is published in the file **Get-ExeAppInformation_function.ps1**
