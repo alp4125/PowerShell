@@ -63,6 +63,10 @@ And It has support for ***-WhatIf***
 
 Invoke-PnPReScan.ps1
 --------------------
+This script will do a ***Plug n Play, Scan for Hardware Changes***.
+
+![alt text](https://github.com/FredrikWall/PowerShell/blob/master/Windows/Pictures/Invoke-PnPReScan02.png?raw=true)
+
 
 ![alt text](https://github.com/FredrikWall/PowerShell/blob/master/Windows/Pictures/Invoke-PnPReScan.png?raw=true)
 
