@@ -111,6 +111,6 @@ function Invoke-CleanTemp {
 Clear-Host
 
 # To run the function to remove files and folders you need to take away -WhatIf
-Invoke-CleanTemp -Force -WhatIf -AllUsers
+Invoke-CleanTemp -Force -WhatIf
 
 #Get-Help Invoke-CleanTemp -Full
