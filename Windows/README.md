@@ -13,6 +13,10 @@ Get-PingStatus.ps1
 One of my oldest functions.
 I used It before Test-Connection came and sometimes I use It today too.
 
+Get-Windows10BuildInformation.ps1
+---------------------------------
+
+
 Invoke-CleanTemp.ps1
 --------------------
 This function will clean the ***current users*** temp folder, plus the ***c:\windows\temp*** folder as standard.
