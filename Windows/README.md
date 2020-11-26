@@ -1,8 +1,13 @@
 # Windows
 
-These are my functions and scripts for working with Windows.
+These are my functions, scripts and special files for working with Windows.
 
 All functions are stored in a separate .ps1 file.
+
+Get-PingStatus
+--------------
+One of my oldest functions.
+I used It before Test-Connection came and sometimes I use It today too.
 
 Invoke-CleanTemp.ps1
 --------------------
@@ -15,4 +20,6 @@ And It has support for ***-WhatIf***
 ![alt text](https://github.com/FredrikWall/PowerShell/blob/master/Windows/Pictures/Invoke-CleanTemp.png?raw=true)
 
 
+Windows10BuildInformation.json
+------------------------------
 

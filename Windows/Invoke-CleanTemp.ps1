@@ -39,11 +39,14 @@ function Invoke-CleanTemp {
     param (
         [Parameter()]
         [Switch]
+        $AllUsers,
+        [Parameter()]
+        [Switch]
         $Force
     )
     
     if ($Force) {
-        $ApplicationsToStop = "iexplore", "outlook", "word", "excel", "chrome", "skype", "lync", "spotify", "itunes", "safari", "firefox", "teams"
+        $ApplicationsToStop = "iexplore", "outlook", "winword", "excel", "chrome", "skype", "lync", "spotify", "itunes", "safari", "firefox", "teams"
         $ApplicationsToStop | Foreach-Object {
             $Application = (Get-Process $_ -ErrorAction SilentlyContinue).Name
             if ($Application) {
@@ -58,23 +61,39 @@ function Invoke-CleanTemp {
         }
     }
     
-    # Users temp folder
-    $UsersTempFolderFilesAndFolders = Get-ChildItem $Env:temp -Recurse
-    $UsersTempFolderFilesAndFoldersCount = $UsersTempFolderFilesAndFolders.Count
-    $UsersTempFolderFilesAndFoldersSize = ($UsersTempFolderFilesAndFolders | Measure-Object -Property Length -Sum -ErrorAction SilentlyContinue).Sum / 1MB
-
-    if ($PSCmdlet.ShouldProcess("$Env:Temp ($UsersTempFolderFilesAndFoldersCount files and folders) ($UsersTempFolderFilesAndFoldersSize MB)", 'Remove')) {
-        $UsersTempFolderFilesAndFolders | Remove-Item -Recurse -ErrorAction SilentlyContinue -Confirm:$false -Force
-    }
-    else {
-    }
     
+    
+    if ($AllUsers) {
+        $AllUsersTempFolderFilesAndFolders = Get-ChildItem -Path "C:\Users\*\AppData\Local\Temp" -Recurse
+            
+        $AllUsersTempFolderFilesAndFoldersCount = $AllUsersTempFolderFilesAndFolders.Count
+        $AllUsersTempFolderFilesAndFoldersSize = "{0:N2} MB" -f (($AllUsersTempFolderFilesAndFolders | Measure-Object -Property Length -Sum -ErrorAction SilentlyContinue).Sum / 1MB)
+
+        if ($PSCmdlet.ShouldProcess("All Users Temp - C:\Users\*\AppData\Local\Temp ($AllUsersTempFolderFilesAndFoldersCount files and folders) ($AllUsersTempFolderFilesAndFoldersSize)", 'Remove')) {
+            $AllUsersTempFolderFilesAndFolders | Remove-Item -Recurse -ErrorAction SilentlyContinue -Confirm:$false -Force
+        }
+        else {
+        }
+        
+    } else {
+        # Users temp folder
+        $UsersTempFolderFilesAndFolders = Get-ChildItem $Env:temp -Recurse
+        $UsersTempFolderFilesAndFoldersCount = $UsersTempFolderFilesAndFolders.Count
+        $UsersTempFolderFilesAndFoldersSize = "{0:N2} MB" -f (($UsersTempFolderFilesAndFolders | Measure-Object -Property Length -Sum -ErrorAction SilentlyContinue).Sum / 1MB)
+
+        if ($PSCmdlet.ShouldProcess("$Env:Temp ($UsersTempFolderFilesAndFoldersCount files and folders) ($UsersTempFolderFilesAndFoldersSize)", 'Remove')) {
+            $UsersTempFolderFilesAndFolders | Remove-Item -Recurse -ErrorAction SilentlyContinue -Confirm:$false -Force
+        }
+        else {
+        }
+    }
+
     # Windows temp folder
     $WindowsTempFolderFilesAndFolders = Get-ChildItem "C:\Windows\Temp" -Recurse -ErrorAction SilentlyContinue
     $WindowsTempFolderFilesAndFoldersCount = $WindowsTempFolderFilesAndFolders.Count
-    $WindowsTempFolderFilesAndFoldersSize = ($WindowsTempFolderFilesAndFolders | Measure-Object -Property Length -Sum -ErrorAction SilentlyContinue).Sum / 1MB
+    $WindowsTempFolderFilesAndFoldersSize = "{0:N2} MB" -f (($WindowsTempFolderFilesAndFolders | Measure-Object -Property Length -Sum -ErrorAction SilentlyContinue).Sum / 1MB)
     
-    if ($PSCmdlet.ShouldProcess("C:\Windows\Temp ($WindowsTempFolderFilesAndFoldersCount files and folders) ($WindowsTempFolderFilesAndFoldersSize MB)", 'Remove')) {
+    if ($PSCmdlet.ShouldProcess("C:\Windows\Temp ($WindowsTempFolderFilesAndFoldersCount files and folders) ($WindowsTempFolderFilesAndFoldersSize)", 'Remove')) {
         $WindowsTempFolderFilesAndFolders | Remove-Item -Recurse -ErrorAction SilentlyContinue -Confirm:$false -Force
     }
     else {
@@ -84,6 +103,6 @@ function Invoke-CleanTemp {
 Clear-Host
 
 # To run the function to remove files and folders you need to take away -WhatIf
-Invoke-CleanTemp -Force -WhatIf
+Invoke-CleanTemp -Force -WhatIf -AllUsers
 
 #Get-Help Invoke-CleanTemp -Full
