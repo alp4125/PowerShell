@@ -15,8 +15,12 @@ I used It before Test-Connection came and sometimes I use It today too.
 
 Get-Windows10BuildInformation.ps1
 ---------------------------------
+This function will show information either from the local computers Windows 10 build numbers.
+
+Or from a specified build numer with the parameter ***-OSBuildVersion***
 
 ![alt text](https://github.com/FredrikWall/PowerShell/blob/master/Windows/Pictures/Get-Windows10BuildInformation01.png?raw=true)
+
 
 
 ![alt text](https://github.com/FredrikWall/PowerShell/blob/master/Windows/Pictures/Get-Windows10BuildInformation02.png?raw=true)
