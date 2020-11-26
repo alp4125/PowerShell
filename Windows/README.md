@@ -1,27 +1,11 @@
-# Active Directory
+# Windows
 
-These are my functions for working with Active Directory without using the Microsoft Active Directory module.
+These are my functions and scripts for working with Windows.
 
-Get-LDAPComputer.ps1
+Invoke-CleanTemp.ps1
 --------------------
 
-Get-LDAPGroup.ps1
------------------
 
-Get-LDAPOU.ps1
---------------
 
-Get-LDAPUser.ps1
-----------------
 
-New-LDAPComputer.ps1
---------------------
 
-New-LDAPGroup.ps1
------------------
-
-New-LDAPOU.ps1
---------------
-
-New-LDAPUser.ps1
-----------------
