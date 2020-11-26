@@ -64,6 +64,8 @@ And It has support for ***-WhatIf***
 Invoke-PnPReScan.ps1
 --------------------
 
+![alt text](https://github.com/FredrikWall/PowerShell/blob/master/Windows/Pictures/Invoke-PnPReScan.png?raw=true)
+
 Windows10BuildInformation.json
 ------------------------------
 
