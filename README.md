@@ -22,8 +22,3 @@ if you use my code in your work It would be nice with a thanks message.
 - Visual Studio Code
 - Windows
 
-Create-WiFiPoster.ps1
-
-Get-PingStatus.ps1
-
-Invoke-PnPReScan.ps1
