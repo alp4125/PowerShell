@@ -5,7 +5,7 @@ Welcome to my PowerShell repository with functions, scripts, modules and other n
 
 Feel free to use my code.
 
-<<<<<<< HEAD
+
 If you use my functions and scripts It would be nice to have a thank you :)
 
 And If you use my PowerShell code in your published scripts I would like to have a notice about that and
