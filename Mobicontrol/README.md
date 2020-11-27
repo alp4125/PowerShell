@@ -1,4 +1,4 @@
-# Active Directory
+# Mobicontrol
 
 These are my scripts and functions for working with Mobicontrol.
 
