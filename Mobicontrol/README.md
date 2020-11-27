@@ -1,27 +1,8 @@
-# Active Directory
+# Mobicontrol
 
-These are my functions for working with Active Directory without using the Microsoft Active Directory module.
+These are my scripts and functions for working with Mobicontrol.
 
-Get-LDAPComputer.ps1
---------------------
+Restart-MobiControlService.ps1
+------------------------------
 
-Get-LDAPGroup.ps1
------------------
-
-Get-LDAPOU.ps1
---------------
-
-Get-LDAPUser.ps1
-----------------
-
-New-LDAPComputer.ps1
---------------------
-
-New-LDAPGroup.ps1
------------------
-
-New-LDAPOU.ps1
---------------
-
-New-LDAPUser.ps1
-----------------
+It will only restart the Mobicontrol Deployment Service.
