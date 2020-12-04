@@ -83,7 +83,8 @@ This function will create a shortcut.
 I have been using this for a long time in different projects and It's a nice one.
 Using parameters to change how the shortcut will work.
 
-![alt text](https://github.com/FredrikWall/PowerShell/blob/master/Windows/Pictures/New-Shortcut01.png.png?raw=true)
+
+![alt text](https://github.com/FredrikWall/PowerShell/blob/master/Windows/Pictures/New-Shortcut01.png?raw=true)
 
 
 Windows10BuildInformation.json
