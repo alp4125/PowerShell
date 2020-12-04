@@ -87,7 +87,7 @@ Using parameters to change how the shortcut will work.
 
 To create a shortcut that will run my EXE Application Information tool without starting PowerShell manually first and add another icon to it and starts PowerShell minimised so we don't see the PowerShell console we can do like this:
 
-New-Shortcut -Source "C:\Windows\System32\WindowsPowerShell\v1.0\powerShell.exe" -Destination "$env:Public\Desktop\EXE Application Information.lnk" -Arguments "C:\Scripts\ExeApplicationInformation.ps1" -WindowStyle Minimised -Icon "C:\Scripts\Pelfusion-Flat-File-Type-Exe.ico" -Force
+**New-Shortcut -Source** "C:\Windows\System32\WindowsPowerShell\v1.0\powerShell.exe" **-Destination** "$env:Public\Desktop\EXE Application Information.lnk" **-Arguments** "C:\Scripts\ExeApplicationInformation.ps1" **-WindowStyle** Minimised **-Icon** "C:\Scripts\Pelfusion-Flat-File-Type-Exe.ico" **-Force**
 
 ![alt text](https://github.com/FredrikWall/PowerShell/blob/master/Windows/Pictures/New-Shortcut01.png?raw=true)
 
