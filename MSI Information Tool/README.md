@@ -1,4 +1,4 @@
-# MSI Application Information Tool
+# MSI Information Tool
 This tool is written in PowerShell Studio 2019.
 
 If you want to use the tool just get the **msiinformation.ps1** file.
