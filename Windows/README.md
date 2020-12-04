@@ -77,6 +77,13 @@ Just start the script with PowerShell started with ***Run As Administrator***.
 ![alt text](https://github.com/FredrikWall/PowerShell/blob/master/Windows/Pictures/Invoke-PnPReScan03.png?raw=true)
 
 
+New-Shortcut.ps
+---------------
+This function will create a shortcut.
+I have been using this for a long time in different projects and It's a nice one.
+Using parameters to change how the shortcut will work.
+
+![alt text](https://github.com/FredrikWall/PowerShell/blob/master/Windows/Pictures/New-Shortcut.png.png?raw=true)
 
 Windows10BuildInformation.json
 ------------------------------
