@@ -30,7 +30,7 @@ function Invoke-DownloadApplication {
         
         .LINK
             Latest version of the function can be found here.
-            https://github.com/fredrikwall/powershell
+            https://github.com/FredrikWall/PowerShell
 
     #>
 
