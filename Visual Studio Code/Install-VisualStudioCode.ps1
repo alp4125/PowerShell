@@ -225,6 +225,6 @@ Function Set-BasicPSSettingsVisualStudioCode {
 
 Install-Package NuGet -Force
 Install-Script Install-VSCode -Scope CurrentUser -Force
-& $env:USERPROFILE\Documents\WindowsPowerShell\Scripts\Install-vscode.ps1 -AdditionalExtensions "eamodio.gitlens","davidanson.vscode-markdownlint","vscode-icons-team.vscode-icons","dotjoshjohnson.xml"
+& "$(Split-Path $PROFILE)\Scripts\Install-vscode.ps1" -AdditionalExtensions "eamodio.gitlens","davidanson.vscode-markdownlint","vscode-icons-team.vscode-icons","dotjoshjohnson.xml"
 Set-OpenWithVisualStudioCode -Scope System -File -Directory
 Set-BasicPSSettingsVisualStudioCode
